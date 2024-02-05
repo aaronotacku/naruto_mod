@@ -72,15 +72,15 @@ public class ProcedureAddXP2JutsuCommandExecuted extends ElementsNarutomodMod.Mo
 			itemmainhand = ((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY);
 			itemoffhand = ((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemOffhand() : ItemStack.EMPTY);
 			if ((EntityBijuManager.cloakLevel((EntityPlayer) entity) > 0)) {
-				EntityBijuManager.addCloakXp((EntityPlayer) entity, (int) xp2add);
+				EntityBijuManager.addCloakXp((EntityPlayer) entity, (int) (10 * xp2add));
 			} else if (((itemmainhand).getItem() == new ItemStack(ItemEightGates.block, (int) (1)).getItem())) {
-				ItemEightGates.addBattleXP((EntityPlayer) entity, (int) xp2add);
+				ItemEightGates.addBattleXP((EntityPlayer) entity, (int) (10 * xp2add));
 			} else if (itemmainhand.getItem() instanceof ItemJutsu.Base) {
-				ItemJutsu.addBattleXP((EntityPlayer) entity, (int) xp2add);
+				ItemJutsu.addBattleXP((EntityPlayer) entity, (int) (10 * xp2add));
 			} else if (((itemoffhand).getItem() == new ItemStack(ItemEightGates.block, (int) (1)).getItem())) {
-				ItemEightGates.addBattleXP((EntityPlayer) entity, (int) xp2add);
+				ItemEightGates.addBattleXP((EntityPlayer) entity, (int) (10 * xp2add));
 			} else if (itemoffhand.getItem() instanceof ItemJutsu.Base) {
-				ItemJutsu.addBattleXP((EntityPlayer) entity, (int) xp2add);
+				ItemJutsu.addBattleXP((EntityPlayer) entity, (int) (10 * xp2add));
 			}
 		} else {
 			if (entity instanceof EntityPlayer && !entity.world.isRemote) {
