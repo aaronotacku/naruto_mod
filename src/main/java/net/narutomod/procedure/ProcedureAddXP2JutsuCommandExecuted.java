@@ -53,15 +53,15 @@ public class ProcedureAddXP2JutsuCommandExecuted extends ElementsNarutomodMod.Mo
 			}
 		}.getText()));
 		if ((EntityBijuManager.cloakLevel((EntityPlayer) entity) > 0)) {
-			EntityBijuManager.addCloakXp((EntityPlayer) entity, (int) xp2add);
+			EntityBijuManager.addCloakXp((EntityPlayer) entity, (int) xp2add*10);
 		} else if (((itemmainhand).getItem() == new ItemStack(ItemEightGates.block, (int) (1)).getItem())) {
-			ItemEightGates.addBattleXP((EntityPlayer) entity, (int) xp2add);
+			ItemEightGates.addBattleXP((EntityPlayer) entity, (int) xp2add*10);
 		} else if (itemmainhand.getItem() instanceof ItemJutsu.Base) {
-			ItemJutsu.addBattleXP((EntityPlayer) entity, (int) xp2add);
+			ItemJutsu.addBattleXP((EntityPlayer) entity, (int) xp2add*10);
 		} else if (((itemoffhand).getItem() == new ItemStack(ItemEightGates.block, (int) (1)).getItem())) {
-			ItemEightGates.addBattleXP((EntityPlayer) entity, (int) xp2add);
+			ItemEightGates.addBattleXP((EntityPlayer) entity, (int) xp2add*10);
 		} else if (itemoffhand.getItem() instanceof ItemJutsu.Base) {
-			ItemJutsu.addBattleXP((EntityPlayer) entity, (int) xp2add);
+			ItemJutsu.addBattleXP((EntityPlayer) entity, (int) xp2add*10);
 		}
 	}
 }
